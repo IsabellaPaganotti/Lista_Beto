@@ -1,162 +1,130 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+ex1.
+def contador(N1, N2):
+	return contador
+N1 = int(input(‘Digite um número: ’))
+N2 = int(input(‘Digite outro número ’))
+Soma = N1 + N2
+Print(f‘A soma entre estes dois números é {soma}’)
 
-# C extensions
-*.so
+ex2. 
+def verificador_parouimpar():
+return verificador_parouimpar
+num = int(input("Informe um número:  "))
+if num % 2 ==0:
+print('Este número é um número PAR')
+else:
+ 	print('Este número é IMPAR')
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+ex3.
+def conversor_temperatura():
+	return conversor_temperatura
+graus = int(input(‘Qual a temperatura em graus celsius: ’))
+f = (graus * 1.8) + 32
+print(f‘ {graus}° graus convertido para fahrenheit fica {f}’)
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+ex4.
+def verificador_letra():
+		pal = str(input(‘Informe uma palavra ’))
+		print(f‘Sua palavra {pal} possui ’, len(pal), ‘letras’)
+Verificador_letra()                                                              
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+ex5.
+def tabuada():
+    return tabuada
+print("Vamos fazer a tabuada!")
+n = int(input("Escolha um numero  "))
+for c in range(1 ,10):
+    tab = n * c
+    print(f'{n} x {c} = {tab}')
+print('FIM')
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
+ex6.
+def media_aritimetica():
+   return media_aritimetica
+print('Vamos calcular a média aritmética dos alunos')
+n1 = float(input('Informe a primeira nota  '))
+n2 = float(input('Informe a segunda nota  '))
+n3 = float(input('Informe a terceira nota do aluno  '))
+media = (n1 + n2 + n3) / 3
+print(f'A média deste aluno é {media:.2f}')
 
-# Translations
-*.mo
-*.pot
+ex7.
+def inverter_palavra(palavra):
+ return palavra[::-1]
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
+palavra = input("Digite uma palavra: ")
+print(inverter_palavra(palavra))
 
-# Flask stuff:
-instance/
-.webassets-cache
+ex8.
+def numero_lista():
+    return numero_lista
+r = 'S'
+numero = []
+while r == 'S':
+    n = numero.append(int(input('Insira o valor que entrará na lista:  ')))
+    r = str(input('Deseja continuar? [S/N]:  ')).upper()
+print('Fim')
+print(f'A sua lista possui {len(numero)} números dentro dela')
 
-# Scrapy stuff:
-.scrapy
+ex.9
+	def verificador_idade():
+		id = int(input(‘Informe a sua idade ’))
+if id >= 18:
+print(‘Você atingiu a maior idade’)
+else:
+print(Você ainda não atingiu a maior idade’)
+Verificador_idade()
 
-# Sphinx documentation
-docs/_build/
+ex10
+def triangulo():
+return triangulo
+print('Vamos calcular a área de um triângulo!')
+base = int(input("Por favor informe a base do triângulo
+altura = int(input('Agora informe a altura do triângulo  '))
+area = (base * altura) / 2
+print(f'Com base nas informações apresentadas a área do triângulo é {área:.0f}')
 
-# PyBuilder
-.pybuilder/
-target/
+ex11
+def contar_palavras_unicas():
+ frase = input("Digite uma frase: ")
+ palavras = frase.lower().split()
+ palavras_unicas = set(palavras)
+ print("Palavras únicas:", len(palavras_unicas))
+contar_palavras_unicas()
 
-# Jupyter Notebook
-.ipynb_checkpoints
+ex12
+def verificador_primo():
+    inicio = int(input("Digite o início do intervalo: "))
+    fim = int(input("Digite o fim do intervalo: "))
+    primos = [n for n in range(inicio, fim+1) if n > 1 and all(n % i != 0 for i in range(2, int(n**0.5) + 1))]
+    print("Números primos:", primos)
+verificador_primo()
 
-# IPython
-profile_default/
-ipython_config.py
+ex13
+notas = []
+qt = int(input('Quantas notas você deseja adicionar no sistema?:  '))
+for n in range(qt):
+    nota = float(input(f'Insira a nota {n + 1}:  '))
+    notas.append(nota)
+media = sum(notas) / len(notas)
+nt = [nota for nota in notas if nota > media]
+print(f'{notas}')
+print(f'media: {media:.2}')
+print(f'Notas acima da média: {nt}')
 
-# pyenv
-#   For a library or package, you might want to ignore these files since the code is
-#   intended to run in multiple environments; otherwise, check them in:
-# .python-version
+ex14
+def verificador_palindromo():
+    return verificador_palindromo
+frase = str(input('Digite uma frase  ')).strip().upper() #eliminou os espaços antes e depois e jogou tudo para maiuscula
+palavras = frase.split() #sliptou a frase para que gere uma lista
+junto = ''.join(palavras) #juntou a lista para eliminar os espaços
+inverso = ''
+for letra in range(len(junto) -1, -1, -1): #aqui começa o inverso
+    inverso += junto[letra]
+if inverso == junto:
+    print('Temos um palindromo')
+else:
+    print('A frase digitada não é um palindromo')
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
 
-# poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
 
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
-#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
-#   in version control.
-#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
-.pdm.toml
-.pdm-python
-.pdm-build/
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
